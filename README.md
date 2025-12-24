@@ -52,6 +52,6 @@ chmod 644 /var/ossec/etc/rules/local_rules.xml
 
 Доступ на веб https://localhost:4443
 
-Учетьные данные 
+Учетные данные 
 
 admin:SecretPassword
