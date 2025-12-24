@@ -11,6 +11,7 @@
 docker logs -f single-node-wazuh.manager-1
 
 Проверка того, что Docker использует актуальный конфиг путем сравнение хеш-сумм
+
 docker exec -it single-node-wazuh.manager-1 bash -lc 'ls -l /var/ossec/etc/ossec.conf /wazuh-config-mount/etc/ossec.conf; sha256sum /var/ossec/etc/ossec.conf /wazuh-config-mount/etc/ossec.conf'
 
 В случае если конфиг в докере не актуальный, его можно насильно поменять на /var/ossec/etc/ossec.conf
@@ -27,7 +28,9 @@ docker exec -it single-node-wazuh.manager-1 /var/ossec/bin/wazuh-logtest
 
 
 Работа с докером
+
 В директории /wazuh-docker/single-node/ 
+
 Включить:
 docker compose up -d
 
@@ -35,8 +38,7 @@ docker compose up -d
 docker compose down
 
 
-Проверка контейнеров
-
+Проверка контейнеров:
 docker ps
 
 
@@ -45,6 +47,7 @@ docker ps
 Демонстрация
 
 cp /tmp/local_rules.xml /var/ossec/etc/rules/local_rules.xml
+
 chmod 644 /var/ossec/etc/rules/local_rules.xml
 
 Доступ на веб https://localhost:4443
