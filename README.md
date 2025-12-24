@@ -38,3 +38,17 @@ docker compose down
 Проверка контейнеров
 
 docker ps
+
+
+Для корректной работы сбора логов Nginx необходимо поместить правила local_rules.xml в /var/ossec/etc/rules/local_rules.xml и выдать права 644
+
+Демонстрация
+
+cp /tmp/local_rules.xml /var/ossec/etc/rules/local_rules.xml
+chmod 644 /var/ossec/etc/rules/local_rules.xml
+
+Доступ на веб https://localhost:4443
+
+Учетьные данные 
+
+admin:SecretPassword
